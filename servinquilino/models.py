@@ -39,5 +39,5 @@ class Expensa(models.Model):
     #IdUsuario = models.ForeignKey(Dato, null=False, blank=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.IdUsuario) + ' - ' + self.anio + ' - ' + self.mes + ' $' + str(self.importe)
-        #return str(self.IdUsuario) + ' - ' + self.anio + ' - ' + self.mes + ' $' + str(self.importe)
+        #return str(self.IdExpensa) + ' - ' + self.anio + ' - ' + self.mes + ' $' + str(self.importe)
+        return self.user.username + ' - ' + str(self.IdExpensa) + ' - ' + self.anio + ' - ' + self.mes + ' $' + str(self.importe)
